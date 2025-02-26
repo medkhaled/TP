@@ -14,10 +14,15 @@ pipeline {
                 echo 'build'
             }
         }
+
         stage('Run Tests') {
             steps {
-                sh 'python -m unittest discover -s . -p "test_stats_calcul.py"'
-                echo 'Tests'
+                sh '. .venv/bin/activate && pytest --junit-xml test-reports/results.xml test_stats_calcul.py'
+            }
+            post {
+                always {
+                    junit 'test-reports/results.xml'
+                }
             }
         }
     }
