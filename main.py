@@ -1,4 +1,4 @@
-from stats_calcul import somme, moyenne, ecart_type
+from stats_calcul import somme, moyenne, ecart_type, mediane
 def main():
     valeurs = []
     for i in range(10):
@@ -8,6 +8,7 @@ def main():
     print(f"Somme: {somme(valeurs)}")
     print(f"Moyenne: {moyenne(valeurs)}")
     print(f"Écart-type: {ecart_type(valeurs)}")
+    print(f"Médiane: {mediane(valeurs)}")
 
 if __name__ == "__main__":
     main()
