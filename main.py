@@ -1,4 +1,4 @@
-from stats_calcul import somme, moyenne, ecart_type1
+from stats_calcul import somme, moyenne, ecart_type
 def main():
     valeurs = []
     for i in range(10):
