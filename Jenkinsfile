@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt'
+                sh 'python -m venv .venv && . .venv/bin/activate && python -m pip install -r requirements.txt'
                 echo 'Dependencies installed'
             }
         }
